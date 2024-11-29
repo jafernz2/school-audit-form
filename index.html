@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inferno School District Audit Form</title>
+    <style>
+        /* Add basic styling here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .question {
+            margin-bottom: 10px;
+        }
+        .required-comment {
+            display: none;
+            color: red;
+            font-size: 0.9em;
+        }
+        #average-score {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .submit-button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inferno School District Audit Form</h1>
+    <p>**Note**: If any rating is below 3, the auditor must provide a comment explaining the rating.</p>
+
+    <form id="audit-form">
+        <!-- General Information Section -->
+        <div class="section">
+            <label for="school-name">Name of School:</label>
+            <input type="text" id="school-name" name="school-name" required><br><br>
+
+            <label for="auditor-name">Name of Auditor:</label>
+            <input type="text" id="auditor-name" name="auditor-name" required><br><br>
+
+            <label for="auditor-title">Title in District:</label>
+            <input type="text" id="auditor-title" name="auditor-title" required><br><br>
+
+            <label for="school-dropdown">Select School:</label>
+            <select id="school-dropdown" name="school-dropdown" required>
+                <option value="Inferno School">Inferno School</option>
+                <option value="Inspire School">Inspire School</option>
+            </select><br><br>
+
+            <label for="audit-reason">Reason for Audit:</label>
+            <select id="audit-reason" name="audit-reason" required>
+                <option value="Normal Audit">Normal Audit</option>
+                <option value="Complaint Audit">Complaint Audit</option>
+                <option value="Administration Use Audit">Administration Use Audit</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>
