@@ -23,6 +23,10 @@
             margin-bottom: 10px;
             display: block;
         }
+        textarea {
+            width: 100%;
+            height: 50px;
+        }
         .required-comment {
             display: none;
             color: red;
@@ -45,10 +49,6 @@
         .submit-button:hover {
             background-color: #0056b3;
         }
-        textarea {
-            width: 100%;
-            height: 50px;
-        }
     </style>
 </head>
 <body>
@@ -60,19 +60,19 @@
         <div class="section">
             <h2>General Information</h2>
             <label for="school-name">Name of School:</label>
-            <input type="text" id="school-name" name="school-name" required><br>
+            <input type="text" id="school-name" name="school-name" required>
 
             <label for="auditor-name">Name of Auditor:</label>
-            <input type="text" id="auditor-name" name="auditor-name" required><br>
+            <input type="text" id="auditor-name" name="auditor-name" required>
 
             <label for="auditor-title">Title in District:</label>
-            <input type="text" id="auditor-title" name="auditor-title" required><br>
+            <input type="text" id="auditor-title" name="auditor-title" required>
 
             <label for="school-dropdown">Select School:</label>
             <select id="school-dropdown" name="school-dropdown" required>
                 <option value="Inferno School">Inferno School</option>
                 <option value="Inspire School">Inspire School</option>
-            </select><br>
+            </select>
 
             <label for="audit-reason">Reason for Audit:</label>
             <select id="audit-reason" name="audit-reason" required>
@@ -87,7 +87,7 @@
             <h2>1. Academic Performance</h2>
             <!-- Questions -->
             <div class="question">
-                <label>1.1. The school meets state-mandated academic performance benchmarks.</label>
+                <label>1.6. The school provides effective Advanced Placement (AP) or Honors courses.</label>
                 <select>
                     <option value="Pass">Pass</option>
                     <option value="N/A">N/A</option>
@@ -97,7 +97,7 @@
                 <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
             </div>
             <div class="question">
-                <label>1.2. Students demonstrate consistent year-over-year growth in standardized test scores.</label>
+                <label>1.7. Intervention programs are available for struggling students.</label>
                 <select>
                     <option value="Pass">Pass</option>
                     <option value="N/A">N/A</option>
@@ -107,27 +107,7 @@
                 <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
             </div>
             <div class="question">
-                <label>1.3. Programs are in place to support underperforming students.</label>
-                <select>
-                    <option value="Pass">Pass</option>
-                    <option value="N/A">N/A</option>
-                    <option value="Fail">Fail</option>
-                </select>
-                Rating: <input type="number" class="rating" min="1" max="5" required>
-                <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
-            </div>
-            <div class="question">
-                <label>1.4. The curriculum is diverse and inclusive, accommodating a variety of student needs.</label>
-                <select>
-                    <option value="Pass">Pass</option>
-                    <option value="N/A">N/A</option>
-                    <option value="Fail">Fail</option>
-                </select>
-                Rating: <input type="number" class="rating" min="1" max="5" required>
-                <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
-            </div>
-            <div class="question">
-                <label>1.5. The school offers robust career and college readiness programs.</label>
+                <label>1.8. The school offers dual enrollment or early college credit opportunities.</label>
                 <select>
                     <option value="Pass">Pass</option>
                     <option value="N/A">N/A</option>
@@ -138,12 +118,11 @@
             </div>
         </div>
 
-        <!-- Repeat Similar Structure for All Sections -->
         <div class="section">
-            <h2>2. Safety Protocols</h2>
+            <h2>2. Safety and Discipline</h2>
             <!-- Questions -->
             <div class="question">
-                <label>2.1. The school enforces a robust and clear safety protocol for emergencies.</label>
+                <label>2.4. Staff receive ongoing training for handling disciplinary incidents effectively.</label>
                 <select>
                     <option value="Pass">Pass</option>
                     <option value="N/A">N/A</option>
@@ -153,17 +132,7 @@
                 <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
             </div>
             <div class="question">
-                <label>2.2. The school actively trains staff and students for emergency preparedness.</label>
-                <select>
-                    <option value="Pass">Pass</option>
-                    <option value="N/A">N/A</option>
-                    <option value="Fail">Fail</option>
-                </select>
-                Rating: <input type="number" class="rating" min="1" max="5" required>
-                <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
-            </div>
-            <div class="question">
-                <label>2.3. Effective anti-bullying programs are in place.</label>
+                <label>2.5. Security measures, such as surveillance cameras and locked doors, are operational.</label>
                 <select>
                     <option value="Pass">Pass</option>
                     <option value="N/A">N/A</option>
@@ -173,6 +142,48 @@
                 <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
             </div>
         </div>
+
+        <div class="section">
+            <h2>3. Technology and Infrastructure</h2>
+            <!-- Questions -->
+            <div class="question">
+                <label>3.1. Classrooms have up-to-date computers and technology.</label>
+                <select>
+                    <option value="Pass">Pass</option>
+                    <option value="N/A">N/A</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                Rating: <input type="number" class="rating" min="1" max="5" required>
+                <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
+            </div>
+            <div class="question">
+                <label>3.2. Internet connectivity is reliable and fast across the campus.</label>
+                <select>
+                    <option value="Pass">Pass</option>
+                    <option value="N/A">N/A</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                Rating: <input type="number" class="rating" min="1" max="5" required>
+                <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>4. Community and Family Engagement</h2>
+            <!-- Questions -->
+            <div class="question">
+                <label>4.4. Parent-teacher conferences are scheduled regularly and are well-attended.</label>
+                <select>
+                    <option value="Pass">Pass</option>
+                    <option value="N/A">N/A</option>
+                    <option value="Fail">Fail</option>
+                </select>
+                Rating: <input type="number" class="rating" min="1" max="5" required>
+                <textarea class="comment" placeholder="Enter comment if rating is below 3..."></textarea>
+            </div>
+        </div>
+
+        <!-- Add More Questions Here -->
 
         <!-- Calculate Average Score -->
         <div id="average-score" class="section">
